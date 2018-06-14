@@ -1,2 +1,4 @@
 *.pyc
 *.vcd
+*.v
+*.vhd
