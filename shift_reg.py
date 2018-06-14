@@ -2,13 +2,13 @@ from myhdl import *
 from random import randrange
 from sys import argv
 
-def generate_shift_reg_signals():
+def generate_shift_reg_signals(BIT_WIDTH = 8):
     ret = {}
 
     for i in ['ser_in', 'ser_out', 'output_latch', 'clk', 'clk_en']:
         ret[i] = Signal(bool(0))
 
-    ret['data_out'] = Signal(intbv(0)[8:])
+    ret['data_out'] = Signal(intbv(0)[BIT_WIDTH:])
 
     return ret
 
